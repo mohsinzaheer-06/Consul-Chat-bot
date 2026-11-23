@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', 'Noto Naskh Arabic', system-ui, -apple-system, sans-serif;
+    --font-urdu: 'Noto Naskh Arabic', 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f5f4ee;
+    color: #111116;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark body {
+    background-color: #09090e;
+    color: #f4f4f6;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+[dir='rtl'] {
+  font-family: var(--font-urdu);
+  line-height: 1.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
