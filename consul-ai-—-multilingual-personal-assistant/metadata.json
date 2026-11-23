@@ -1,0 +1,6 @@
+{
+  "name": "Consul AI — Multilingual Personal Assistant",
+  "description": "Professional multilingual AI personal assistant supporting English, Urdu, and Roman Urdu with smart follow-up suggestions and local browser memory.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
